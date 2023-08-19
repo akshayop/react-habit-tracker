@@ -1,5 +1,7 @@
 import Home from "./Home";
+import WeeklyData from "./WeeklyData";
 
 export {
-    Home
+    Home,
+    WeeklyData
 }
