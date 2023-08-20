@@ -1,0 +1,88 @@
+.homeContainer {
+    min-height: 70vh;
+    height: 100%;
+    padding-bottom: 0.2px;
+    border-radius: 0 1rem 1rem 1rem;
+    background-color: #010409ae;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.formContainer input {
+    margin-top: 2rem;
+    width: 15rem;
+    height: 2rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+}
+
+.formContainer button {
+    margin: 2rem 0 0 0.6rem;
+    padding: 0.5rem;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 0.7rem;
+    transition: 0.3s;
+}
+
+.formContainer button:hover {
+    background-color: #14A44D;
+    cursor: pointer;
+}
+
+.displayContainer {
+    margin: 2rem 3rem 1rem;
+    min-height: 23rem;
+    border-radius: 0.7rem;
+    background-color: #0D1117;
+}
+
+.displayTitle {
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+    color: white;
+}
+
+.displayContainer ul {
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: 1rem;
+}
+
+.displayContainer ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    margin: 0 5rem 0.5rem 1rem;
+    padding: 0.5rem 2rem;
+    color: white;
+    border-radius: 0.7rem;
+    background-color: #0104095f;
+    border: 1px solid rgba(211, 211, 211, 0.471);
+    transition: 0.4s transform;
+}
+
+.displayContainer ul li:hover {
+    transform: scale(1.04);
+}
+
+.deleteBtn {
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 70, 70);
+    transition: 0.5s
+}
+
+.deleteBtn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+

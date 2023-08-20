@@ -19,3 +19,33 @@ span {
     letter-spacing: 0.6rem;
     font-weight: 500;
 }
+
+.navContainer {
+    margin: 2rem 15rem 0 15rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    width: 15rem;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.398);
+    background-color: #010409ae;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav:hover a{
+    filter: blur(1px);
+}
+
+nav a:hover {
+    filter: blur(0);
+    border-bottom: 2px solid gray;
+    opacity: 1;
+}
+

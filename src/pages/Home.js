@@ -1,6 +1,7 @@
 import { Component } from "react";
 import store from "../store";
 import { addHabit } from "../actions";
+import styles from "../styles/page.module.css";
 
 class Home extends Component {
 
@@ -37,32 +38,31 @@ class Home extends Component {
 
     render() {
         return (
-            <div >
-                <div>
+            <div className={styles.homeContainer}>
+                <div className={styles.formContainer}>
                     <input type="text" placeholder="Create New Habit...." value={this.state.value} onChange={(e) => this.setState({ value: e.target.value})} />
                     <button onClick={this.handleAddHabit} >Add Habit</button>
                 </div>
 
-                <div>
+                <div className={styles.displayContainer}>
                     <ul>
-                        {this.state.habits.length < 1 && <h1>Nothing to Track</h1>}
+                        {this.state.habits.length < 1 && <h1 className={styles.displayTitle}>Nothing to Track</h1>}
                         {this.state.habits.map((habit, index) => {
                             return (
                                 <div key={index}>
                                     <li>
-                                        <div>
-                                            {habit.description}
-                                        </div>
+                                        {habit.description}
 
-                                        <div>
-                                            <button onClick={() => this.handleDeleteHabit(habit)} >Delete</button>
-                                        </div>
+                                        <button className={styles.deleteBtn} onClick={() => this.handleDeleteHabit(habit)} >Delete</button>
                                     </li>
+
                                 </div>
                             )
                         })}
                     </ul>
                 </div>
+
+                
             </div>
         );
     };
