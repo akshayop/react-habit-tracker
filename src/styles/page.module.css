@@ -16,6 +16,7 @@
     width: 15rem;
     height: 2rem;
     padding-left: 1rem;
+    font-size: 1rem;
     border: none;
     border-radius: 0.7rem;
 }
@@ -51,7 +52,7 @@
 .displayContainer ul {
     text-decoration: none;
     list-style-type: none;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
 
 .displayContainer ul li {

@@ -1,4 +1,5 @@
-import { ADD_HABIT } from "../actions";
+import { ADD_HABIT, REMOVE_HABIT } from "../actions";
+import { v4 as uuidv4 } from 'uuid';
 
 let habits = localStorage.getItem('habits');
 let initialState;
@@ -19,6 +20,7 @@ export default function reducer ( state = initialState, action) {
             let newState = [
                 ...state,
                 {
+                    id: uuidv4(),
                     description: action.payload.description,
                     weekStatus: [ "", "", "", "", "", "", ""]
                 }
@@ -26,6 +28,12 @@ export default function reducer ( state = initialState, action) {
 
             localStorage.setItem('habits', JSON.stringify(newState));
             return newState;
+
+        case REMOVE_HABIT: 
+            let remove = state.filter(habit => habit.id !== action.payload.id);
+
+            localStorage.setItem('habits', JSON.stringify(remove));
+            return remove;
 
         default: 
             return state;

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import store from "../store";
-import { addHabit } from "../actions";
+import { addHabit, removeHabit } from "../actions";
 import styles from "../styles/page.module.css";
 
 class Home extends Component {
@@ -24,16 +24,24 @@ class Home extends Component {
             const habitName = this.state.value;
             store.dispatch(addHabit(habitName));
             alert("Added Successfully");
+            this.setState({
+                value: ""
+            })
         }
 
         this.rerender();
+    }
+
+    handleDeleteHabit = (habit) => {
+        store.dispatch(removeHabit(habit.id));
+        this.rerender();
+        alert("habit removed");
     }
 
     rerender(){
         this.setState({
             habits: store.getState()
         });
-        console.log("rerendered");
     }
 
     render() {
@@ -52,7 +60,6 @@ class Home extends Component {
                                 <div key={index}>
                                     <li>
                                         {habit.description}
-
                                         <button className={styles.deleteBtn} onClick={() => this.handleDeleteHabit(habit)} >Delete</button>
                                     </li>
 
