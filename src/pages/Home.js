@@ -54,7 +54,7 @@ class Home extends Component {
 
                 <div className={styles.displayContainer}>
                     <ul>
-                        {this.state.habits.length < 1 && <h1 className={styles.displayTitle}>Nothing to Track</h1>}
+                        {this.state.habits.length < 1 && <h1 className={styles.displayTitle}>Nothing to Track...</h1>}
                         {this.state.habits.map((habit, index) => {
                             return (
                                 <div key={index}>

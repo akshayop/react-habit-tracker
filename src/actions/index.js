@@ -1,7 +1,8 @@
 // Action types
 
 export const ADD_HABIT = "addHabit";
-export const REMOVE_HABIT = "removeHabit"
+export const UPDATE_STATUS = "updateStatus";
+export const REMOVE_HABIT = "removeHabit";
 
 // Action creaters
 
@@ -10,6 +11,16 @@ export function addHabit( description ) {
         type: ADD_HABIT,
         payload: {
             description: description
+        }
+    };
+};
+
+export function updateStatus( id, index ) {
+    return {
+        type: UPDATE_STATUS,
+        payload: {
+            id: id,
+            index: index
         }
     };
 };
