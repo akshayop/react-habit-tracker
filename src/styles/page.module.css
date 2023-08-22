@@ -52,7 +52,7 @@
 .displayContainer ul {
     text-decoration: none;
     list-style-type: none;
-    padding: 1rem 0;
+    padding: 1rem 0 1rem 4rem;
 }
 
 .displayContainer ul li {

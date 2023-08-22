@@ -18,8 +18,8 @@ class App extends Component {
   
           <div className={styles.navContainer}>
             <nav>
-              <NavLink className={styles.navLoc} exact="true" to="/" >Home</NavLink>
-              <NavLink className={styles.navLoc}exact="true" to="/weekly-info" >Week Info</NavLink>
+              <NavLink  className={styles.navLoc} exact="true" to="/" >Home</NavLink>
+              <NavLink  className={styles.navLoc} exact="true" to="/weekly-info" >Week Info</NavLink>
             </nav>
     
             <Routes>
