@@ -2,6 +2,7 @@ import { Component } from "react";
 import store from "../store";
 import { addHabit, removeHabit } from "../actions";
 import styles from "../styles/page.module.css";
+import { toast } from "react-toastify";
 
 class Home extends Component {
 
@@ -18,12 +19,12 @@ class Home extends Component {
 
         e.preventDefault();
         if(this.state.value <= 2) {
-            alert("should contain some text")
+            toast.error("should contain some text")
             return;
         } else {
             const habitName = this.state.value;
             store.dispatch(addHabit(habitName));
-            alert("Added Successfully");
+            toast.success("Added Successfully")
             this.setState({
                 value: ""
             })
@@ -35,7 +36,7 @@ class Home extends Component {
     handleDeleteHabit = (habit) => {
         store.dispatch(removeHabit(habit.id));
         this.rerender();
-        alert("habit removed");
+        toast.success("habit removed")
     }
 
     rerender(){

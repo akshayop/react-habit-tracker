@@ -2,6 +2,7 @@ import { Component } from "react";
 import store from "../store";
 import { updateStatus } from "../actions";
 import styles from "../styles/week.module.css";
+import { toast } from "react-toastify";
 
 class Day extends Component {
 
@@ -14,6 +15,7 @@ class Day extends Component {
 
     handleStatus() {
         store.dispatch(updateStatus(this.props.id, this.props.index));
+        toast.success("Habit updated...")
         this.props.rerenderWeekStatus();
     }
 
