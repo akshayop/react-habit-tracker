@@ -30,9 +30,13 @@ class WeeklyData extends Component {
                         )}
                         {this.state.habits.map((habit, i) => (
                             <li key={`habit-${i}`}>
-                                <div className={styles.title}>  
-                                    {habit.description}
-                                    
+
+                                <div className={styles.calender}>
+                                    <img src="https://cdn-icons-png.flaticon.com/128/10804/10804108.png" alt="calender" />
+                                    <div className={styles.title}>  
+                                        {habit.description}
+                                        
+                                    </div>
                                 </div>
 
                                 <div className={styles.dayContainer}>

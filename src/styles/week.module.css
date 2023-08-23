@@ -95,3 +95,14 @@ ul {
 .status:hover {
     cursor: pointer;
 }
+
+.calender {
+    display: flex;
+    align-items: center;
+}
+
+.calender img {
+    height: 1rem;
+    width: 1rem;
+    padding-right: 0.5rem;
+}

@@ -87,3 +87,14 @@
     cursor: pointer;
 }
 
+.description {
+    display: flex;
+    align-items: center;
+}
+
+.description img {
+    width: 1rem;
+    height: 1rem;
+    padding-right: 1rem;
+}
+

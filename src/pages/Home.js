@@ -59,7 +59,15 @@ class Home extends Component {
                             return (
                                 <div key={index}>
                                     <li>
-                                        {habit.description}
+                                        <div className={styles.description}>
+                                            <img src="https://cdn-icons-png.flaticon.com/128/9512/9512688.png" alt="descriprion" />
+
+                                            <div>
+                                                {habit.description}
+                                            </div>
+                                        </div>
+
+                                        
                                         <button className={styles.deleteBtn} onClick={() => this.handleDeleteHabit(habit)} >Delete</button>
                                     </li>
 
