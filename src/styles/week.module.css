@@ -106,3 +106,23 @@ ul {
     width: 1rem;
     padding-right: 0.5rem;
 }
+
+.calenderContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+}
+
+.deleteBtn {
+    width: 4rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 70, 70);
+    transition: 0.5s
+}
+
+.deleteBtn:hover {
+    background-color: red;
+    cursor: pointer;
+}

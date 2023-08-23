@@ -18,7 +18,7 @@ class Home extends Component {
     handleAddHabit = (e) => {
 
         e.preventDefault();
-        if(this.state.value <= 2) {
+        if(this.state.value.length <= 2) {
             toast.error("should contain some text")
             return;
         } else {

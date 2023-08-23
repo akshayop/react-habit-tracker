@@ -3,6 +3,8 @@ import store from "../store";
 import { Day } from "../components";
 import { v4 as uuidv4 } from 'uuid';
 import styles from "../styles/week.module.css"
+import { removeHabit } from "../actions";
+import { toast } from "react-toastify";
 
 class WeeklyData extends Component {
 
@@ -12,6 +14,12 @@ class WeeklyData extends Component {
             habits: store.getState()
         };
         this.rerenderWeekStatus = this.rerenderWeekStatus.bind(this);
+    }
+
+    handleDeleteHabit = (habit) => {
+        store.dispatch(removeHabit(habit.id));
+        this.rerenderWeekStatus();
+        toast.success("habit removed")
     }
 
     rerenderWeekStatus(){
@@ -31,12 +39,16 @@ class WeeklyData extends Component {
                         {this.state.habits.map((habit, i) => (
                             <li key={`habit-${i}`}>
 
-                                <div className={styles.calender}>
-                                    <img src="https://cdn-icons-png.flaticon.com/128/10804/10804108.png" alt="calender" />
-                                    <div className={styles.title}>  
-                                        {habit.description}
-                                        
+                                <div className={styles.calenderContainer}>
+                                    <div className={styles.calender}>
+                                        <img src="https://cdn-icons-png.flaticon.com/128/10804/10804108.png" alt="calender" />
+                                        <div className={styles.title}>  
+                                            {habit.description}
+                                            
+                                        </div>
                                     </div>
+
+                                    <button className={styles.deleteBtn} onClick={() => this.handleDeleteHabit(habit)} >Delete</button>
                                 </div>
 
                                 <div className={styles.dayContainer}>
